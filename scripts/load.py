@@ -7,11 +7,11 @@ def load_to_db(df, table_name):
     try:
         engine = create_engine(DB_URI)
         
-        # 1. Load the main cleaned table
+
         df.to_sql(table_name, engine, if_exists='replace', index=False)
         logging.info(f"Successfully loaded {len(df)} records into {table_name}.")
 
-        # 2. Generate Summary Table (Average GPA per Gender)
+
         with engine.connect() as conn:
             conn.execute(text("DROP TABLE IF EXISTS student_summary;"))
             summary_query = """
