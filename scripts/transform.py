@@ -1,3 +1,4 @@
+# Standardizing date formats and handling missing values to ensure data integrity.
 import pandas as pd
 import logging
 

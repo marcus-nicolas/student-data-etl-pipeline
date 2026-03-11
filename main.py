@@ -1,3 +1,5 @@
+# Student Data ETL Pipeline
+# Orchestrates the extraction, transformation, and loading of student records.
 import logging
 import os
 import pandas as pd
